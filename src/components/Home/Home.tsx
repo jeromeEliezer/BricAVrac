@@ -1,7 +1,7 @@
 import { Caption, HomeStyle, Img, LinkStyle, Underlay, UnderlayCoverTop, UnderlayCoverBottom, UnderlayCoverBottomChild  } from "./Home.styled";
 import logo from '../../assets/images/logo.jpeg'
 import { Variants } from "framer-motion";
-import { Button } from "../Auth/Login.styled";
+import { Button } from "../Auth/LoginRegister.styled";
 
 const imageVariants : Variants = {
     open : {

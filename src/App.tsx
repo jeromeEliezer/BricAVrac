@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+//components
 import Home from './components/Home/Home';
 import Login from './components/Auth/Login';
 import Profile from './components/Profile';
+import Register from './components/Auth/register';
 import ProtectedRoute from './components/ProtectedRoute';
 
 // - Avoir un compte Github
@@ -14,19 +16,20 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 const App: React.FC = () => {
 
+  //props for protected route
   const [isAuth, setIsAuth] = useState<boolean>(false);
+  
   return (
     <Router>
       <Switch>
       <Route 
-          exact path='/'
-          component= {() => <Home />
-        } />
+          exact path='/' component= {Home} />
+          <Route exact path='/register' component={Register}/>
         <Route 
-          path='/login'
+          exact path='/login'
           component= {() => <Login setIsAuth={setIsAuth} />
         } />
-        <ProtectedRoute isAuth={isAuth} path='/profile' component={Profile} />
+        <ProtectedRoute isAuth={isAuth} exact path='/profile' component={Profile} />
       </Switch>
     </Router>
   );

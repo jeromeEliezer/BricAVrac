@@ -12,13 +12,6 @@ text-align: center;
 border: red 2px solid;
 height:100%;
 font-size: 2rem;
-
-// & div { 
-//     width:90%;
-//     height: 90%;
-//     display:flex;
-//     flex-direction: column;
-// }
 `;
 
 

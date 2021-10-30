@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import petales from '../../assets/images/petales.png';
+import { AiOutlineEye } from 'react-icons/ai';
+import {AiOutlineEyeInvisible} from 'react-icons/ai';
 
+export const Title = styled.h3`
+text-align : center;
+`;
 
 
 export const Root = styled.div`
@@ -43,12 +48,20 @@ export const LoginForm = styled.form`
     border-radius: 4px;
 `;
 
+export const Input = styled.input`
+border : 1px solid #4FA14A;
+    &focus{
+        border : 1px solid #EF7F04;
+    }
+`;
+
 type ButtonProps = {
     animate?: boolean,
     color: string,
     variant?: boolean,
     textColor?: string
 }
+
 export const Button = styled.button`
     width: 120px;
     font-size: 1.5rem;
@@ -66,9 +79,20 @@ export const Button = styled.button`
                 color: white;
             }
         `}
-        
     ` }
     transition: all 300ms ease 0ms;
-    
+`;
 
+type EyesProps = {
+    transform?: boolean,
+}
+
+export const Eyes = styled(AiOutlineEye)`
+    position: absolute;
+    transform: translateX(14rem) translateY(5.65rem);
+`;
+
+export const CloseEyes = styled(AiOutlineEyeInvisible)`
+    position: absolute;
+    transform: translateX(14rem) translateY(5.65rem);
 `;
