@@ -20,16 +20,6 @@ export const Root = styled.div`
     // border : 2px #EF7F04 solid;
     ` ;
 
-export const BackgroundPetales = styled.div`
-    width:100%;
-    height: 50vh;
-    border: 1px solid #EF7F04;
-
-    // background-image : url(${petales});
-    // background-repeat : no-repeat;
-    // background-position : center;
-`;
-
 
 export const LoginForm = styled.form`
     display: flex;
