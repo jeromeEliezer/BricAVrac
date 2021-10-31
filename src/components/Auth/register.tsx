@@ -1,64 +1,32 @@
 import { useState } from "react";
-import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
-import { Image, LinkAuth, LoginForm, Title, Root, Button, Input, Eyes, CloseEyes } from "./LoginRegister.styled";
+import { Image, Root, Input } from "./LoginRegister.styled";
 import petales from '../../assets/images/petales.png';
- 
+import { Form } from "./Form";
+import { CredentialsType } from "../../types";
 
-interface Props {
-    setIsAuth: (isAuth: boolean) => void;
-}
-
-
-const Register :React.FC<Props> = ({ setIsAuth }) => {
-    const [{ username, password, email }, setCredentials] = useState({
-        email: '',
-        username: '',
+const Register: React.FC = () => {
+    const [registerCredentials, setCrendentials] = useState<CredentialsType>({
         password: '',
-        
+        email: '',
+        username: ''
     });
-
-    const history = useHistory();
-    
-    const handleLogin = () => {
-        setIsAuth(true)
-        history.push('/profile')
-    };
-
-    const [showPassord, setShowPassword] = useState(false)
-
-    const toggleShowPassword = () => {
-        setShowPassword((clearShowPassord) => !clearShowPassord)
+    //keep value inputs
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const target = e.target as HTMLInputElement;
+        const name = target.name;
+        setCrendentials({ ...registerCredentials, [name]: target.value })
     }
     return (
         <Root>
             <Image src={petales} />
-            <LoginForm>
-                <Title>S'inscrire</Title>
+            <Form title="S'inscrire" setCredentials={setCrendentials} credentials={registerCredentials} >
                 <label htmlFor='email' >Email</label>
-                <Input placeholder='Adresse mail' type='email' value={email} onChange={(event) => setCredentials({
-                    email: event.target.value,
-                    password,
-                    username
-                })}
+                <Input name='email' onChange={handleChange} placeholder='Adresse mail' type='email'
                 />
                 <label htmlFor='username'>Prénom</label>
-                <Input placeholder='Prénom' value={username} onChange={(event) => setCredentials({
-                    username: event.target.value,
-                    password,
-                    email
-                })} />
+                <Input name='username' onChange={handleChange} placeholder='Prénom' />
 
-                <label htmlFor='password'>Mot de passe</label>
-                <Input placeholder='Mot de passe' type={(showPassord) ? "text" : 'password'} value={password} onChange={(event) => setCredentials({
-                    password: event.target.value,
-                    username,
-                    email
-                })} />
-                {showPassord ? <CloseEyes onClick={toggleShowPassword} /> : <Eyes onClick={toggleShowPassword} />}
-                <Button variant={true} color='#4FA14A' type='submit'onClick={() => handleLogin()} >S'inscrire</Button>
-                <p>Vous avez déjà un compte ? <LinkAuth to='/login' > Cliquez ici </LinkAuth></p>
-            </LoginForm>
+            </Form>
         </Root>
     )
 }

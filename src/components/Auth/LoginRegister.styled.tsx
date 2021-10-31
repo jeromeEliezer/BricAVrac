@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import petales from '../../assets/images/petales.png';
-import { AiOutlineEye } from 'react-icons/ai';
-import {AiOutlineEyeInvisible} from 'react-icons/ai';
+
+import  { ButtonProps } from '../../types'
+    
 import { Link } from "react-router-dom";
 
 
@@ -26,7 +27,7 @@ export const Root = styled.div`
     ` ;
 
 
-export const LoginForm = styled.form`
+export const StyledForm = styled.form`
     display: flex;
     align-self: center;
     justify-content: center;
@@ -50,12 +51,7 @@ border : 1px solid #4FA14A;
     }
 `;
 
-type ButtonProps = {
-    animate?: boolean,
-    color: string,
-    variant?: boolean,
-    textColor?: string
-}
+
 
 export const Button = styled.button`
     cursor:pointer;
@@ -79,25 +75,27 @@ export const Button = styled.button`
     transition: all 300ms ease 0ms;
 `;
 
-type EyesProps = {
-    transform?: boolean,
-}
+export const Password = styled.div`
+    position : relative;
+    & > input {
+        width : 100%;
+    }
+`
 
-export const Eyes = styled(AiOutlineEye)`
-    position: absolute;
-    transform: translateX(14rem) translateY(5.65rem);
+export const PasswordIcon = styled.span`
+    position : absolute;
+    top : 85%;
+    left :85%;
+    transform : translateY(-50%);
 `;
 
-export const CloseEyes = styled(AiOutlineEyeInvisible)`
-    position: absolute;
-    transform: translateX(14rem) translateY(5.65rem);
-`;
+
 
 export const LinkAuth = styled(Link)`
-text-decoration: none;
-cursor: pointer;
-color: #4FA14A;
-&:hover{
-    color: #EF7F04;
-}
+    text-decoration: none;
+    cursor: pointer;
+    color: #4FA14A;
+    &:hover{
+        color: #EF7F04;
+    }
 `;

@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { RouteProps } from "react-router";
 
-export default function Profile() {
+function Profile() {
     return (
         <div>
-
-            <h3>
-                Bienvenue
-            </h3>
+            <div>
+                prooot
+            </div>
         </div>
     )
 }
+
+export default Profile
+
