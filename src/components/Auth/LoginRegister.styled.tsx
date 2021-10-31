@@ -2,22 +2,27 @@ import styled from "styled-components";
 import petales from '../../assets/images/petales.png';
 import { AiOutlineEye } from 'react-icons/ai';
 import {AiOutlineEyeInvisible} from 'react-icons/ai';
+import { Link } from "react-router-dom";
+
 
 export const Title = styled.h3`
 text-align : center;
 `;
 
+export const Image = styled.img`
+    position :absolute;
+    z-index:-5;
+    max-width:3000px;
+    max-height:300px;
+    transform: translateX(-15rem) translateY(-27rem);
+`;
 
 export const Root = styled.div`
     height: 100%;
     display: flex;
+    z-index:5;
     justify-content: center;
     align-items: center;
-    // background-image : url(${petales});
-    // background-repeat : no-repeat;
-    // background-position : contain;
-  
-    // border : 2px #EF7F04 solid;
     ` ;
 
 
@@ -40,7 +45,7 @@ export const LoginForm = styled.form`
 
 export const Input = styled.input`
 border : 1px solid #4FA14A;
-    &focus{
+    &:focus{
         border : 1px solid #EF7F04;
     }
 `;
@@ -53,6 +58,7 @@ type ButtonProps = {
 }
 
 export const Button = styled.button`
+    cursor:pointer;
     width: 120px;
     font-size: 1.5rem;
     padding: 10px;
@@ -85,4 +91,13 @@ export const Eyes = styled(AiOutlineEye)`
 export const CloseEyes = styled(AiOutlineEyeInvisible)`
     position: absolute;
     transform: translateX(14rem) translateY(5.65rem);
+`;
+
+export const LinkAuth = styled(Link)`
+text-decoration: none;
+cursor: pointer;
+color: #4FA14A;
+&:hover{
+    color: #EF7F04;
+}
 `;

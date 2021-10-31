@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { Link } from 'react-router-dom';
-import { LoginForm, Title, Root, Button,  Eyes, CloseEyes, Input } from "./LoginRegister.styled";
+import { Image, LinkAuth, LoginForm, Title, Root, Button,  Eyes, CloseEyes, Input } from "./LoginRegister.styled";
 import petales from '../../assets/images/petales.png';
 
 
@@ -32,6 +32,7 @@ const Login: React.FC<Props> = ({ setIsAuth }) => {
 
     return (
         <Root>
+            <Image src={petales} />
             <LoginForm>
                 <Title>Se connecter</Title>
                 <label htmlFor='username'>Prénom</label>
@@ -47,7 +48,7 @@ const Login: React.FC<Props> = ({ setIsAuth }) => {
                 {showPassord ? <CloseEyes onClick={toggleShowPassword} /> : <Eyes onClick={toggleShowPassword}> </Eyes>}
 
                 <Button variant={true} color='#4FA14A' type='submit' onClick={() => handleLogin()}>Se connecter</Button>
-                <p>Vous n'avez pas de compte ? <Link to='/register' > Cliquer ici </Link></p>
+                <p>Vous n'avez pas de compte ? <LinkAuth to='/register' > Cliquez ici </LinkAuth></p>
             </LoginForm>
 
 

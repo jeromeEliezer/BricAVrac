@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 
 export const HomeStyle = styled.form`
-position : relative;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-text-align: center;
-border: red 2px solid;
-height:100%;
-font-size: 2rem;
+    position : relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: red 2px solid;
+    height:100%;
+    font-size: 2rem;
 `;
 
 
@@ -25,6 +25,7 @@ export const Img = styled(motion.img)`
 
 export const LinkStyle = styled(Link)`
     text-decoration : none;
+    cursor: pointer;
 `;
 
 export const Underlay = styled.div`

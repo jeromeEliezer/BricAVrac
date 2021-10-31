@@ -19,17 +19,18 @@ const App: React.FC = () => {
 
   //props for protected route
   const [isAuth, setIsAuth] = useState<boolean>(false);
-  
+
   return (
     <Router>
       <Switch>
-      <Route 
-          exact path='/' component= {Home} />
-          <Route exact path='/register' component={Register}/>
-        <Route 
-          exact path='/login'
-          component= {() => <Login setIsAuth={setIsAuth} />
+        <Route
+          exact path='/' component={Home} />
+        <Route exact path='/register' component={() => <Register setIsAuth={setIsAuth} />
         } />
+        <Route
+          exact path='/login'
+          component={() => <Login setIsAuth={setIsAuth} />
+          } />
         <ProtectedRoute isAuth={isAuth} exact path='/profile' component={Profile} />
       </Switch>
     </Router>
@@ -37,4 +38,3 @@ const App: React.FC = () => {
 }
 
 export default App;
- 
