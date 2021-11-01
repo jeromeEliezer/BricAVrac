@@ -26,7 +26,7 @@ Autres exemple de navigation possible...
         ```
         
 ## Learn More
-[# BricAVrac](https://bricavrac.com)
+[BricAVrac](https://bricavrac.com)
 
 
 
