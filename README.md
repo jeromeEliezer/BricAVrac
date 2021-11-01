@@ -1,5 +1,8 @@
 # This project is technical test by Bric A Vrac
 
+
+[https://bricavrac.com](https://bricavrac.com)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -25,9 +28,7 @@ Autres exemple de navigation possible...
         
         ```
         
-## Learn More
 
-[https://bricavrac.com](https://bricavrac.com)
 
 
 
