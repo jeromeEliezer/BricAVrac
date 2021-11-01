@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //components
 import Home from './components/Home/Home';
 import Login from './components/Auth/Login';
-import Profile from './components/Profile';
+import Profile from './components/Profile/Profile';
 import Register from './components/Auth/register';
 
 // - Avoir un compte Github

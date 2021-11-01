@@ -9,16 +9,12 @@ interface Props {
 }
 
 const Login: React.FC<Props> = () => {
+    //setState value of input 
     const [registerCredentials, setCrendentials] = useState<CredentialsType>({
         password: '',
         email: '',
         username: ''
     });
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const target = e.target as HTMLInputElement;
-        const name = target.name;
-        setCrendentials({ ...registerCredentials, [name]: target.value })
-    };
     return (
         <Root>
             <Image src={petales} />

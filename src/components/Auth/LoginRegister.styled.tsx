@@ -1,13 +1,10 @@
 import styled from "styled-components";
-import petales from '../../assets/images/petales.png';
 
 import  { ButtonProps } from '../../types'
-    
 import { Link } from "react-router-dom";
 
-
 export const Title = styled.h3`
-text-align : center;
+    text-align : center;
 `;
 
 export const Image = styled.img`
@@ -39,7 +36,6 @@ export const StyledForm = styled.form`
     border : 3px #4FA14A solid;
     background-color: white;
     padding 40px;
-    // background: #FFFFFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 `;
@@ -50,8 +46,6 @@ border : 1px solid #4FA14A;
         border : 1px solid #EF7F04;
     }
 `;
-
-
 
 export const Button = styled.button`
     cursor:pointer;
@@ -88,7 +82,6 @@ export const PasswordIcon = styled.span`
     left :85%;
     transform : translateY(-50%);
 `;
-
 
 
 export const LinkAuth = styled(Link)`

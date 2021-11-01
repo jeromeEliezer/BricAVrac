@@ -8,7 +8,7 @@ import ToggleForm from '../ToggleForm';
 type FormProps = {
     title: string;
     children: React.ReactNode;
-    //for setting password up    
+    //for setting password    
     setCredentials: (credentials: CredentialsType) => void;
     credentials: CredentialsType
 };
@@ -17,8 +17,6 @@ export const Form = (props: FormProps) => {
     const ref = useRef<HTMLInputElement>(null);
     //toogle password visibility
     const [showPassword, setShowPassword] = useState<boolean>(true);
-    //string relaceing password when !showPassword
-    const [hiddenPassword, setHiddenPassword] = useState<string>('');
     // history
     const history = useHistory();
     //return • when !showPassword or password
@@ -32,7 +30,7 @@ export const Form = (props: FormProps) => {
             }
         }
     }, [showPassword])
-    // keep value password
+    // getting password value
     const handleChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
         const target = e.target as HTMLInputElement;
         props.setCredentials({ ...props.credentials, password: target.value });

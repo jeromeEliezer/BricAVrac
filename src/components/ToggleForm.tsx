@@ -1,5 +1,4 @@
-import {useState, useEffect , useMemo} from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import {useState, useMemo} from 'react';
 /// type of component's Title 
 import { ToggleFormType } from '../types';
 // Link from react-router-dom with styled

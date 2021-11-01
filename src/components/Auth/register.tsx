@@ -10,7 +10,7 @@ const Register: React.FC = () => {
         email: '',
         username: ''
     });
-    //keep value inputs
+    //getting input values
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const target = e.target as HTMLInputElement;
         const name = target.name;
