@@ -12,7 +12,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 \posibilités de faire un dossier routes avec un index.tsx :fire:
 Autres exemple de navigation possible...
 
-````
+```.tsx
+
  <Router>
             <Switch>
                 <Route path='/' exact component={Home}  />
