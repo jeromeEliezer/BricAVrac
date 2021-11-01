@@ -13,7 +13,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 posibilités de faire un dossier routes avec un index.tsx pour gerer le systeme des routes. :fire:
-Autres exemple de navigation possible...
+Autres exemples de navigation possible...
 
 ```.tsx
 
