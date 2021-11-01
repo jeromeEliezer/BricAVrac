@@ -9,7 +9,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-\posibilités de faire un dossier routes avec un index.tsx :fire:
+posibilités de faire un dossier routes avec un index.tsx pour gerer le systeme des routes. :fire:
 Autres exemple de navigation possible...
 
 ```.tsx
@@ -17,8 +17,8 @@ Autres exemple de navigation possible...
  <Router>
             <Switch>
                 <Route path='/' exact component={Home}  />
-                <Route path='/' exact component={Profil}  />
-                <Route path='/' exact component={Trending}  />
+                <Route path='/Profil' exact component={Profil}  />
+                <Route path='/Trending' exact component={Trending}  />
                 <Redirect to='/' />
             </Switch>
         </Router>
